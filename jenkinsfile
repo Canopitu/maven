@@ -1,7 +1,7 @@
 pipeline {
 	   agent any 
 	stages {
-	    stage ('Compile Stage ') {
+	    stage ('Compile Stage') {
 	
 	     steps {
 	withMaven(maven : 'maven') {
@@ -16,7 +16,7 @@ pipeline {
 	              }
 	            }
 	          }
-	         stage ('Install Stage '){
+	         stage ('Install Stage ') {
 	             steps {
 	withMaven(maven : 'maven') {
 	                      bat 'mvn install'
